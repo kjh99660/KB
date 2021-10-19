@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: 6eec966ff4d64c647823fefa77197664
+  - enabled: 1
+    path: Assets/Scenes/Character.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/FirstFloor.unity
+    guid: 85b9e16298a33a84ba2f409fc8986674
+  - enabled: 1
+    path: Assets/Scenes/UnderGround.unity
+    guid: a09c89021a10c4d43af41996c9186770
+  m_configObjects: {}
