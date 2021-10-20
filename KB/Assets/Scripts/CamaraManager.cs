@@ -18,7 +18,7 @@ public class CamaraManager : MonoBehaviour
 
     private void OnEnable()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("MaleFree1");//Player
         distancePlayerToCamera = new Vector3(0f, 8f, -5f);
         distancePlayerToCameraFirst = new Vector3(0f, 0f, 1f);
         ThirdPos = cameraThirdPos.transform;

@@ -5,10 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed = 5f;
+    
     private Rigidbody playerRigidbody;
-    private float inputX, inputZ, fallSpeed;
+    private float inputX, inputZ, fallSpeed, speed;
     private Vector3 playerVelocity;
+    private Animator animator;
     private void OnEnable()
     {
         Init();
@@ -22,15 +23,21 @@ public class Player : MonoBehaviour
         fallSpeed = playerRigidbody.velocity.y;
 
         playerVelocity = new Vector3(inputX, 0f, inputZ);
-        playerVelocity *= speed;
+        playerVelocity *= speed;      
         playerVelocity.y = fallSpeed;
-        playerRigidbody.velocity = playerVelocity;
+        //playerRigidbody.velocity = playerVelocity;
+        transform.Translate(playerVelocity * Time.deltaTime, Space.World);
+    }
+    private void FixedUpdate()
+    {
+        //animation
     }
     private void Init()
     {
         playerRigidbody = GetComponent<Rigidbody>();
-        inputX = 0f; inputZ = 0f; fallSpeed = 0f;
-         playerVelocity = new Vector3(inputX, 0f, inputZ);
+        animator = GetComponent<Animator>();
+        inputX = 0f; inputZ = 0f; fallSpeed = 0f; speed = 5f;
+        playerVelocity = new Vector3(inputX, 0f, inputZ);
 
     }
 }
