@@ -16,9 +16,9 @@ public class CamaraManager : MonoBehaviour
     private Transform FirstPos;
     private Transform PlayerPos;
 
-    private void OnEnable()
+    private void Awake()
     {
-        player = GameObject.Find("MaleFree1");//Player
+        player = GameObject.Find("Player");//Player
         distancePlayerToCamera = new Vector3(0f, 8f, -5f);
         distancePlayerToCameraFirst = new Vector3(0f, 0f, 1f);
         ThirdPos = cameraThirdPos.transform;
