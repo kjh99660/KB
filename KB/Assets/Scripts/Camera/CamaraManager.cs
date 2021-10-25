@@ -20,10 +20,7 @@ public class CamaraManager : MonoBehaviour
     {
         player = GameObject.Find("Player");//Player
         distancePlayerToCamera = new Vector3(0f, 8f, -5f);
-        distancePlayerToCameraFirst = new Vector3(0f, 0f, 1f);
-        ThirdPos = cameraThirdPos.transform;
-        FirstPos = cameraFirstPos.transform;
-        PlayerPos = player.transform;
+        distancePlayerToCameraFirst = new Vector3(0f, 0f, 1f);       
     }
 
 
@@ -52,6 +49,9 @@ public class CamaraManager : MonoBehaviour
             }
         }
 
+        ThirdPos = cameraThirdPos.transform;
+        FirstPos = cameraFirstPos.transform;
+        PlayerPos = player.transform;
         ThirdPos.position = Vector3.SmoothDamp(ThirdPos.position, PlayerPos.position + distancePlayerToCamera, ref cameraVelocity, SmoothTime);
         ThirdPos.rotation = Quaternion.Euler(35f + ymove, xmove, 0f);
         FirstPos.position = Vector3.SmoothDamp(FirstPos.position, PlayerPos.position + distancePlayerToCameraFirst, ref cameraVelocity, SmoothTime);

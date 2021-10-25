@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 230020806}
   - component: {fileID: 230020805}
   m_Layer: 5
-  m_Name: Sound
+  m_Name: SoundButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,7 +709,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 230020806}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1691481983}
+        m_TargetAssemblyTypeName: IngameUI, Assembly-CSharp
+        m_MethodName: SoundOptionOnOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &230020806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1783,7 +1795,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 655486436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1691481983}
+        m_TargetAssemblyTypeName: IngameUI, Assembly-CSharp
+        m_MethodName: PopUpCancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &655486436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3159,7 +3183,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1129470312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1691481983}
+        m_TargetAssemblyTypeName: IngameUI, Assembly-CSharp
+        m_MethodName: PopUpCancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1129470312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3947,7 +3983,7 @@ GameObject:
   - component: {fileID: 1558204950}
   - component: {fileID: 1558204949}
   m_Layer: 5
-  m_Name: SocialAction
+  m_Name: SocialActionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4016,7 +4052,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1558204950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1691481983}
+        m_TargetAssemblyTypeName: IngameUI, Assembly-CSharp
+        m_MethodName: SocialActionOnOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1558204950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4163,6 +4211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3261742bab1d414d966e2ff3f873b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sound: {fileID: 279841480}
+  SocialAction: {fileID: 121234915}
+  Booth: {fileID: 1358999708}
 --- !u!4 &1691481984
 Transform:
   m_ObjectHideFlags: 0
@@ -4468,7 +4519,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1970245965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1691481983}
+        m_TargetAssemblyTypeName: IngameUI, Assembly-CSharp
+        m_MethodName: PopUpCancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1970245965
 MonoBehaviour:
   m_ObjectHideFlags: 0

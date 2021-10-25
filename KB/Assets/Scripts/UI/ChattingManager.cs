@@ -35,18 +35,23 @@ public class ChattingManager : MonoBehaviour
     }
     public void PushEnter()//메세지 전송
     {
+        if (inputText.text == "") return;
+
         MakeText(inputText.text);
+
         inputText.text = "";
         GameObject temp = Instantiate(textPrefabs, content.transform);
-        Debug.Log(temp);
         temp.transform.SetAsLastSibling();
+
         messages.Add(temp);
         scrollRect.verticalNormalizedPosition = 0f;
+        inputText.ActivateInputField();
+
         SendMessage();
     }
     private void MakeText(string text)
     {
-        if (messages.Count > 10)
+        if (messages.Count > 20)
         {
             Destroy(messages[0] as GameObject);
             messages.RemoveAt(0);
@@ -60,7 +65,10 @@ public class ChattingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            PushEnter();
+        }
     }
     private void Init()
     {
