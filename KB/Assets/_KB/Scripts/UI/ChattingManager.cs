@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ChattingManager : MonoBehaviour
 {
     [Header ("Player")]
-    public Player player;
+    public GameObject player;
     [Header ("Chatting Text")]
     public InputField inputText;
     public GameObject textPrefabs;

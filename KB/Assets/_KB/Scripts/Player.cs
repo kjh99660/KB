@@ -8,9 +8,10 @@ public class Player : MonoBehaviour
     
     private Rigidbody playerRigidbody;
     private float inputX, inputZ, fallSpeed, speed;
-    private Vector3 playerVelocity;
+    private Vector3 playerVelocity, CameraAngle;
     private Animator animator;
     private bool canOperate;
+    public GameObject CameraManager;
     private void OnEnable()
     {
         Init();
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
 
             playerVelocity = new Vector3(inputX, 0f, inputZ);
             playerVelocity *= speed;
+            
             playerVelocity.y = fallSpeed;
             //playerRigidbody.velocity = playerVelocity;
             transform.Translate(playerVelocity * Time.deltaTime, Space.World);
@@ -45,5 +47,8 @@ public class Player : MonoBehaviour
         inputX = 0f; inputZ = 0f; fallSpeed = 0f; speed = 5f;
         playerVelocity = new Vector3(inputX, 0f, inputZ);
         canOperate = true;
+        CameraAngle = CameraManager.GetComponent<CamaraManager>().GetYangle();
+
+
     }
 }
